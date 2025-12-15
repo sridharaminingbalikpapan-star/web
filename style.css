@@ -1,0 +1,66 @@
+:root {
+  --pink: #ff6f91;
+  --teal: #008080;
+  --cream: #fff6e5;
+}
+
+body {
+  background: var(--cream);
+}
+
+/* Colors */
+.bg-teal {
+  background-color: var(--teal);
+}
+
+.btn-pink {
+  background: var(--pink);
+  color: white;
+}
+
+.btn-teal {
+  background: var(--teal);
+  color: white;
+}
+
+/* Search */
+.search-box {
+  border-radius: 30px;
+  padding: 12px;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(135deg, var(--pink), var(--teal));
+  color: white;
+  padding: 70px 0;
+}
+
+/* Feature Card */
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Newsletter */
+.newsletter {
+  background: var(--pink);
+  color: white;
+  padding: 50px 20px;
+}
+
+/* Live Chat */
+.live-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--teal);
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
