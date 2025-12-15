@@ -6,52 +6,73 @@
 
 body {
   background: var(--cream);
+  scroll-behavior: smooth;
+}
+
+/* Navbar Logo */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* Colors */
 .bg-teal {
   background-color: var(--teal);
 }
-
 .btn-pink {
   background: var(--pink);
   color: white;
 }
-
 .btn-teal {
   background: var(--teal);
   color: white;
 }
 
-/* Search */
-.search-box {
-  border-radius: 30px;
-  padding: 12px;
-}
-
-/* Hero */
+/* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, var(--pink), var(--teal));
   color: white;
   padding: 70px 0;
 }
 
-/* Feature Card */
+/* Feature Cards */
 .feature-card {
   background: white;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Newsletter */
-.newsletter {
-  background: var(--pink);
-  color: white;
-  padding: 50px 20px;
+/* Gallery */
+.gallery-img {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
+/* Newsletter Section */
+.bg-pink {
+  background-color: var(--pink);
+}
+.newsletter input {
+  border-radius: 30px;
+  padding: 10px 15px;
+}
+.newsletter button {
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+
+/* Live Chat WhatsApp */
 .live-chat {
   position: fixed;
   bottom: 20px;
@@ -69,25 +90,16 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
-
 .live-chat:hover {
-  background-color: #006666; /* warna teal lebih gelap saat hover */
+  background-color: #006666;
 }
-.logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-/* Gallery images hover effect */
-.gallery-img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* Modal Lightbox */
+.modal-content {
+  background-color: transparent;
+  border: none;
 }
 
-.gallery-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
 }
-
-
