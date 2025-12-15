@@ -52,7 +52,6 @@ body {
   padding: 50px 20px;
 }
 
-/* Live Chat */
 .live-chat {
   position: fixed;
   bottom: 20px;
@@ -63,6 +62,16 @@ body {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.live-chat:hover {
+  background-color: #006666; /* warna teal lebih gelap saat hover */
 }
 .logo-img {
   width: 40px;
@@ -80,4 +89,5 @@ body {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
+
 
