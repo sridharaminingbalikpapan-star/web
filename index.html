@@ -147,33 +147,68 @@
   <h2 class="text-center mb-4">Gallery Karya</h2>
 
   <div class="row g-3">
+    <!-- Gallery item -->
     <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+1" alt="Karya 1" class="img-fluid rounded gallery-img" />
+      <img src="https://via.placeholder.com/300x200?text=Karya+1" alt="Karya 1" class="img-fluid rounded gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="0">
     </div>
     <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+2" alt="Karya 2" class="img-fluid rounded gallery-img" />
+      <img src="https://via.placeholder.com/300x200?text=Karya+2" alt="Karya 2" class="img-fluid rounded gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="1">
     </div>
     <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+3" alt="Karya 3" class="img-fluid rounded gallery-img" />
+      <img src="https://via.placeholder.com/300x200?text=Karya+3" alt="Karya 3" class="img-fluid rounded gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="2">
     </div>
     <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+4" alt="Karya 4" class="img-fluid rounded gallery-img" />
+      <img src="https://via.placeholder.com/300x200?text=Karya+4" alt="Karya 4" class="img-fluid rounded gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="3">
     </div>
-    <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+5" alt="Karya 5" class="img-fluid rounded gallery-img" />
-    </div>
-    <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+6" alt="Karya 6" class="img-fluid rounded gallery-img" />
-    </div>
-    <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+7" alt="Karya 7" class="img-fluid rounded gallery-img" />
-    </div>
-    <div class="col-6 col-md-3">
-      <img src="https://via.placeholder.com/300x200?text=Karya+8" alt="Karya 8" class="img-fluid rounded gallery-img" />
-    </div>
+    <!-- Tambahkan sesuai kebutuhan -->
   </div>
 </section>
 
+<!-- MODAL LIGHTBOX -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://via.placeholder.com/800x500?text=Karya+1" class="d-block w-100" alt="Karya 1">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x500?text=Karya+2" class="d-block w-100" alt="Karya 2">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x500?text=Karya+3" class="d-block w-100" alt="Karya 3">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x500?text=Karya+4" class="d-block w-100" alt="Karya 4">
+            </div>
+            <!-- Tambahkan carousel-item sesuai jumlah gambar -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<script>
+const galleryImages = document.querySelectorAll('.gallery-img');
+const carousel = document.getElementById('carouselGallery');
+galleryImages.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
+    carouselInstance.to(index);
+  });
+});
+                                                </script>
 <!-- NEWSLETTER -->
 <section id="newsletter" class="newsletter text-center py-5 bg-pink text-white">
   <div class="container">
@@ -216,3 +251,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
