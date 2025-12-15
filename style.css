@@ -17,17 +17,9 @@ body {
 }
 
 /* Colors */
-.bg-teal {
-  background-color: var(--teal);
-}
-.btn-pink {
-  background: var(--pink);
-  color: white;
-}
-.btn-teal {
-  background: var(--teal);
-  color: white;
-}
+.bg-teal { background-color: var(--teal); }
+.btn-pink { background: var(--pink); color: white; }
+.btn-teal { background: var(--teal); color: white; }
 
 /* Hero Section */
 .hero-section {
@@ -45,61 +37,36 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
-.feature-card:hover {
-  transform: translateY(-5px);
-}
+.feature-card:hover { transform: translateY(-5px); }
 
 /* Gallery */
 .gallery-img {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.gallery-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
+.gallery-img:hover { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0,0,0,0.25); }
 
 /* Newsletter Section */
-.bg-pink {
-  background-color: var(--pink);
-}
-.newsletter input {
-  border-radius: 30px;
-  padding: 10px 15px;
-}
-.newsletter button {
-  border-radius: 30px;
-  padding: 10px 25px;
-}
+.bg-pink { background-color: var(--pink); }
+.newsletter input { border-radius: 30px; padding: 10px 15px; }
+.newsletter button { border-radius: 30px; padding: 10px 25px; }
 
 /* Live Chat WhatsApp */
 .live-chat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--teal);
-  color: white;
-  padding: 15px 18px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  position: fixed; bottom: 20px; right: 20px;
+  background: var(--teal); color: white;
+  padding: 15px 18px; border-radius: 50%;
+  cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 24px; display: flex; justify-content: center; align-items: center;
+  text-decoration: none; transition: background-color 0.3s ease;
 }
-.live-chat:hover {
-  background-color: #006666;
-}
-/* Modal Lightbox */
-.modal-content {
-  background-color: transparent;
-  border: none;
-}
+.live-chat:hover { background-color: #006666; }
 
+/* Modal Lightbox */
+.modal-content { background-color: transparent; border: none; }
 .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
+.carousel-control-next-icon { filter: invert(1); }
+
+/* Autocomplete */
+#searchSuggestions .list-group-item { cursor: pointer; background-color: white; color: black; }
+#searchSuggestions .list-group-item:hover { background-color: var(--pink); color: white; }
